@@ -1,0 +1,4 @@
+# Do not track some files
+*.pyc
+*.swp
+*.tmp
