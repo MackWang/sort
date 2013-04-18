@@ -2,6 +2,12 @@
 # sort.py
 # collection of sort algorithm
 
+import numpy as np
+from timeit import timeit
+
+
+LIST_OF_INT = np.random.randint(1000, size=100)
+
 
 def bubble_sort(list):
     switch = True
@@ -11,11 +17,12 @@ def bubble_sort(list):
             if list[i] > list[i + 1]:
                 list[i], list[i + 1] = list[i + 1], list[i]
                 switch = True
-    print list
 
 
 def main():
-    bubble_sort([34, 8, 3, 5, 6, 4, 2, 3, 4, 7, 98, 1000, 4, 2, 7, 8, 45])
+    it = timeit('bubble_sort(LIST_OF_INT)', 'from __main__ import bubble_sort;\
+                                             from __main__ import LIST_OF_INT')
+    print it
 
 
 if __name__ == '__main__':
