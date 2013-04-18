@@ -2,7 +2,6 @@
 # test.py
 # test the various sort algorithms
 
-
 from timeit import timeit
 
 
@@ -20,15 +19,15 @@ NUMBER_OF_SORTS = 1000
 
 def main():
     print "Running bubble_sort()..."
-    t  = timeit('bubble_sort(copy(LIST))', setup, number = NUMBER_OF_SORTS)
+    t = timeit('bubble_sort(copy(LIST))', setup, numbe=NUMBER_OF_SORTS)
     print "Average sort time : %f" % (t / NUMBER_OF_SORTS)
     print
     print "Running bubble_sort_opt()..."
-    t  = timeit('bubble_sort_opt(copy(LIST))', setup, number = NUMBER_OF_SORTS)
+    t = timeit('bubble_sort_opt(copy(LIST))', setup, number=NUMBER_OF_SORTS)
     print "Average sort time : %f" % (t / NUMBER_OF_SORTS)
     print
     print "Running bubble_sort_opt2()..."
-    t  = timeit('bubble_sort_opt2(copy(LIST))', setup, number = NUMBER_OF_SORTS)
+    t = timeit('bubble_sort_opt2(copy(LIST))', setup, number=NUMBER_OF_SORTS)
     print "Average sort time : %f" % (t / NUMBER_OF_SORTS)
     print
 

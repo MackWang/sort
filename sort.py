@@ -11,6 +11,7 @@ LIST_OF_INT = np.random.randint(1000, size=100)
 
 
 def bubble_sort(list):
+    '''Bubble sort'''
     switch = True
     while(switch):
         switch = False
@@ -21,6 +22,7 @@ def bubble_sort(list):
 
 
 def bubble_sort_opt(list):
+    '''Bubble sort - nth pass finds nth largest item'''
     n = len(list)
     switch = True
     while(switch):
@@ -33,6 +35,9 @@ def bubble_sort_opt(list):
 
 
 def bubble_sort_opt2(list):
+    '''Bubble sort - multiple items can be placed on final
+    spot in the same pass
+    '''
     n = len(list)
     while(n != 0):
         newn = 0
