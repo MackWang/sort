@@ -9,7 +9,7 @@ from timeit import timeit
 setup = '''
 import numpy as np
 from copy import copy
-from sort import bubble_sort
+from sort import bubble_sort, bubble_sort_opt
 
 LIST = np.random.randint(1000, size=100)
 '''
@@ -22,6 +22,11 @@ def main():
     print "Running bubble_sort()..."
     t  = timeit('bubble_sort(copy(LIST))', setup, number = NUMBER_OF_SORTS)
     print "Average sort time : %f" % (t / NUMBER_OF_SORTS)
+    print
+    print "Running bubble_sort_opt()..."
+    t  = timeit('bubble_sort_opt(copy(LIST))', setup, number = NUMBER_OF_SORTS)
+    print "Average sort time : %f" % (t / NUMBER_OF_SORTS)
+
 
 
 if __name__ == '__main__':
